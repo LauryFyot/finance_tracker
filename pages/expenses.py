@@ -49,7 +49,7 @@ def get_operations_table(selected_category, start_date, end_date):
                 {"name": "Libellé", "id": "Libelle operation"},
                 {"name": "Montant", "id": "Montant operation", "type": "numeric"},
             ],
-            data=df_filtered.to_dict("records"),
+            data=df_filtered.astype(str).to_dict("records"),
             style_table={'height': '400px', 'overflowY': 'auto', 'width': '100%'},  # ✅ Scroll vertical
             style_header={'backgroundColor': 'black', 'color': 'white', 'fontWeight': 'bold'},
             style_data={'backgroundColor': '#222', 'color': 'white'},
